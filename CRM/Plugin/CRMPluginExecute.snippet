@@ -21,7 +21,7 @@
                 ITracingService tracing = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
                 IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
                 IOrganizationService service = ((IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory))).CreateOrganizationService(context.UserId);
-                Entity SentData = (Entity)context.InputParameters[PluginConstants.Target];
+                Entity SentData = (Entity)context.InputParameters["Target"];
 
                 try
                 {
