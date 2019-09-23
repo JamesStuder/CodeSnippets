@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Workflow FakeXrmEasy</Title>
+      <Author>James Studer</Author>
+      <Description>Creates the fake execution context for testing workflows with fake xrm easy</Description>
+      <Shortcut>crmworkt</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            // Real context that will connect to CRM to get data
+            XrmRealContext realContext = new XrmRealContext
+             {
+                 ProxyTypesAssembly = typeof(/*Workflow Assemply*/).Assembly,
+                //This is the name of the connection string in the app.config
+                ConnectionStringName = "CRM"
+             };
+            //FakeWorkFlowcontext - will use to pass data in as if it was running in the real system.
+            XrmFakedWorkflowContext wfContext = realContext.GetDefaultWorkflowContext();
+            //Guid of the record the workflow will be run against
+            wfContext.PrimaryEntityId = Guid.Parse("");
+
+            //New Up you workflow class - This contains your override execute method
+            Workflow workflow = new workflow(); //Change to workflow assemply new up
+            //Here is where the action happens.
+            var runWorkflow = realContext.ExecuteCodeActivity</*Workflow Assemply*/>(wfContext, null, workflow);
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>FakeXrmEasy</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

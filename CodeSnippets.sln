@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAFEE9EA-24D7-435F-99B2-DF0BDA0F9BBF}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRM", "CRM", "{581FCF22-B98F-48B3-A94F-B907DB46EF34}"
 EndProject
@@ -33,6 +37,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflow", "Workflow", "{D5
 		CRM\Workflow\CRMWorkflowExecute.snippet = CRM\Workflow\CRMWorkflowExecute.snippet
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{D95ED225-65D5-46B9-8079-0AF03406D559}"
+	ProjectSection(SolutionItems) = preProject
+		CRM\Plugin\Testing\CRMPluginFakeXrmEasy.snippet = CRM\Plugin\Testing\CRMPluginFakeXrmEasy.snippet
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{4764B6AF-4DAE-4E62-B903-D76918B959EE}"
+	ProjectSection(SolutionItems) = preProject
+		CRM\Workflow\Testing\CRMWorkflowFakeXrmEasy.snippet = CRM\Workflow\Testing\CRMWorkflowFakeXrmEasy.snippet
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +57,8 @@ Global
 		{4063A35E-4268-4BDF-8CCF-A5186BD5A8C2} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
 		{2AEF9D92-259A-413B-AD9A-EE32DD32EAB6} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
 		{D58672CA-8795-498F-81CC-3C0F77A910E7} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
+		{D95ED225-65D5-46B9-8079-0AF03406D559} = {4063A35E-4268-4BDF-8CCF-A5186BD5A8C2}
+		{4764B6AF-4DAE-4E62-B903-D76918B959EE} = {D58672CA-8795-498F-81CC-3C0F77A910E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D00A4BE-6FC3-4E5B-974F-EC0EF86F5D44}

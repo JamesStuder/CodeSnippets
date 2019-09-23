@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Plugin FakeXRMEasy</Title>
+      <Author>James Studer</Author>
+      <Description>Creates the fake execution context for testing plugin with fake xrm easy</Description>
+      <Shortcut>crmplugt</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            //https://dynamicsvalue.com/get-started/plugins
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            XrmRealContext context = new XrmRealContext
+            {
+                ProxyTypesAssembly = typeof(/*PluginAssembly*/).Assembly,
+                //This is the name of the connection string in the app.config
+                ConnectionStringName = "CRM"
+            };
+            XrmFakedPluginExecutionContext executionContext = context.GetDefaultPluginContext();
+            
+            //Here is where you assign the values for the entity.  This is where the data in the context is simulated
+            Entity target = new Entity(/*Entity Name*/)
+            {
+                Id = Guid.Parse(/*record id*/)
+                //add other fields here to send data in the context
+            };
+
+            executionContext.MessageName = //Create, Update, Delete; https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entities#ActionsOnEntityRecords
+            executionContext.Stage = //10 = pre-validation, 20 = pre-operation, 40 = post operation; https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/event-framework
+            executionContext.PrimaryEntityId = target.Id;
+            executionContext.PrimaryEntityName = target.LogicalName;
+            executionContext.InputParameters = new ParameterCollection
+            {
+                new KeyValuePair<string, object>("Target", target)
+            };
+            context.ExecutePluginWith</*PluginAssembly*/>(executionContext)
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+        <Import>
+          <Namespace>FakeXrmEasy</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
