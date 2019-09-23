@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Record Create</Title>
+      <Author>James Studer</Author>
+      <Description>Create a new record in CRM</Description>
+      <Shortcut>crmcr</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+          public void CreateRecord(Entity e)
+          {
+              try
+              {
+                  Service.Create(e);
+              }
+              catch(Exception ex)
+              {
+
+              }
+          }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

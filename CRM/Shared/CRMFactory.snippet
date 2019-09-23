@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Factory</Title>
+      <Author>James Studer</Author>
+      <Description>Sets up properties for working with CRM in a factory pattern.</Description>
+      <Shortcut>crmf</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        public static OrganizationServiceContext GetOrganizationServiceContext(IOrganizationService service) => new OrganizationServiceContext(service);
+        public static Entity NewEntity => new Entity();
+        public static FetchExpression GetFetchExpression(string fetch) => new FetchExpression(fetch);
+        public static Entity CreateEntityWithIDandName(string entityName, Guid id) => new Entity(entityName, id);
+        public static EntityReference CreateNewEntityReference(string entityName, Guid recordID) => new EntityReference(entityName, recordID);
+        public static OptionSetValue CreateNewOptionSetValue(int value) => new OptionSetValue(value);
+        public static Money CreateNewMoney(decimal amount) => new Money(amount);
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk.Client</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

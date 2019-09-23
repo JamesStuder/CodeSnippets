@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Workflow Start</Title>
+      <Author>James Studer</Author>
+      <Description>Starting point for CRM custom workflows</Description>
+      <Shortcut>crmworke</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+          protected override void Execute(CodeActivityContext executionContext)
+          {
+              ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+              IWorkflowContext workflowContext = executionContext.GetExtension<IWorkflowContext>();
+              IOrganizationServiceFactory serviceFactory = executionContext.GetExtension<IOrganizationServiceFactory>();
+              IOrganizationService service = serviceFactory.CreateOrganizationService(workflowContext.UserId);
+              
+              //Insert custom workflow code      
+          }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System.Activities</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk.Workflow</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

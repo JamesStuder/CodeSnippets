@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAFEE9EA-24D7-435F-99B2-DF0BDA0F9BBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRM", "CRM", "{581FCF22-B98F-48B3-A94F-B907DB46EF34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{7F80D03E-487A-481A-9460-70C2D843C367}"
+	ProjectSection(SolutionItems) = preProject
+		AzureLogError.snippet = AzureLogError.snippet
+		AzureLogInfo.snippet = AzureLogInfo.snippet
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{4063A35E-4268-4BDF-8CCF-A5186BD5A8C2}"
+	ProjectSection(SolutionItems) = preProject
+		CRMPluginConstructor.snippet = CRMPluginConstructor.snippet
+		CRMPluginExecute.snippet = CRMPluginExecute.snippet
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2AEF9D92-259A-413B-AD9A-EE32DD32EAB6}"
+	ProjectSection(SolutionItems) = preProject
+		CRMFactory.snippet = CRMFactory.snippet
+		CRMOrgServiceContext.snippet = CRMOrgServiceContext.snippet
+		CRMServiceCreate.snippet = CRMServiceCreate.snippet
+		CRMServiceDelete.snippet = CRMServiceDelete.snippet
+		CRMServiceUpdate.snippet = CRMServiceUpdate.snippet
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflow", "Workflow", "{D58672CA-8795-498F-81CC-3C0F77A910E7}"
+	ProjectSection(SolutionItems) = preProject
+		CRMWorkflowExecute.snippet = CRMWorkflowExecute.snippet
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{581FCF22-B98F-48B3-A94F-B907DB46EF34} = {BAFEE9EA-24D7-435F-99B2-DF0BDA0F9BBF}
+		{7F80D03E-487A-481A-9460-70C2D843C367} = {BAFEE9EA-24D7-435F-99B2-DF0BDA0F9BBF}
+		{4063A35E-4268-4BDF-8CCF-A5186BD5A8C2} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
+		{2AEF9D92-259A-413B-AD9A-EE32DD32EAB6} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
+		{D58672CA-8795-498F-81CC-3C0F77A910E7} = {581FCF22-B98F-48B3-A94F-B907DB46EF34}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D00A4BE-6FC3-4E5B-974F-EC0EF86F5D44}
+	EndGlobalSection
+EndGlobal

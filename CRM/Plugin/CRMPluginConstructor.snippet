@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Plugin DAO Class</Title>
+      <Author>James Studer</Author>
+      <Description>Creates constructor for DAO classes</Description>
+      <Shortcut>crmplugcon</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+        public $classname$(IOrganizationService service, ITracingService tracing)
+        {
+            Service = service;
+            Tracing = tracing;
+        }
+
+        private IOrganizationService Service { get; set; }
+        private ITracingService Tracing { get; set; }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk.Client</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

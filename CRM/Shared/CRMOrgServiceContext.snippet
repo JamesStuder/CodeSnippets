@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Organization Service Context</Title>
+      <Author>James Studer</Author>
+      <Description>Sets up a try catch with using statement for Organization service context</Description>
+      <Shortcut>crmosc</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            try
+            {
+                using (OrganizationServiceContext xrmContext = CRMFactory.OrganizationServiceContext(service))
+                {
+
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk.Client</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

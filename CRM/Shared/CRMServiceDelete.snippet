@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Record Delete</Title>
+      <Author>James Studer</Author>
+      <Description>Delete Record in CRM</Description>
+      <Shortcut>crmdel</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+          public void DeleteRecord(string entityName, Guid recordID)
+          {
+              try
+              {
+                  Service.Delete(entityName, recordID);
+              }
+              catch(Exception ex)
+              {
+
+              }
+          }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

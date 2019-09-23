@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Plugin Start</Title>
+      <Author>James Studer</Author>
+      <Description>Check if plugin service provider is null and start the plugin code</Description>
+      <Shortcut>crmpluge</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        /// <summary>
+        /// Plugin execute method
+        /// </summary>
+        /// <param name="serviceProvider">IServiceProvider which contains everything we need to know about the process that kicked off the plugin</param>
+        public void Execute(IServiceProvider serviceProvider)
+        {
+            if(serviceProvider != null)
+            {
+                ITracingService tracing = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+                IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+                IOrganizationService service = ((IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory))).CreateOrganizationService(context.UserId);
+                Entity SentData = (Entity)context.InputParameters[PluginConstants.Target];
+
+                try
+                {
+                    //Insert plugin code here
+                }
+                catch (Exception ex)
+                {
+                    
+                }
+            }
+        }
+        ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Xrm.Sdk</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
