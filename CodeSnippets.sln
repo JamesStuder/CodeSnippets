@@ -9,28 +9,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRM", "CRM", "{581FCF22-B98
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{7F80D03E-487A-481A-9460-70C2D843C367}"
 	ProjectSection(SolutionItems) = preProject
-		AzureLogError.snippet = AzureLogError.snippet
-		AzureLogInfo.snippet = AzureLogInfo.snippet
+		Azure\AzureLogError.snippet = Azure\AzureLogError.snippet
+		Azure\AzureLogInfo.snippet = Azure\AzureLogInfo.snippet
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{4063A35E-4268-4BDF-8CCF-A5186BD5A8C2}"
 	ProjectSection(SolutionItems) = preProject
-		CRMPluginConstructor.snippet = CRMPluginConstructor.snippet
-		CRMPluginExecute.snippet = CRMPluginExecute.snippet
+		CRM\Plugin\CRMPluginConstructor.snippet = CRM\Plugin\CRMPluginConstructor.snippet
+		CRM\Plugin\CRMPluginExecute.snippet = CRM\Plugin\CRMPluginExecute.snippet
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2AEF9D92-259A-413B-AD9A-EE32DD32EAB6}"
 	ProjectSection(SolutionItems) = preProject
-		CRMFactory.snippet = CRMFactory.snippet
-		CRMOrgServiceContext.snippet = CRMOrgServiceContext.snippet
-		CRMServiceCreate.snippet = CRMServiceCreate.snippet
-		CRMServiceDelete.snippet = CRMServiceDelete.snippet
-		CRMServiceUpdate.snippet = CRMServiceUpdate.snippet
+		CRM\Shared\CRMFactory.snippet = CRM\Shared\CRMFactory.snippet
+		CRM\Shared\CRMOrgServiceContext.snippet = CRM\Shared\CRMOrgServiceContext.snippet
+		CRM\Shared\CRMServiceCreate.snippet = CRM\Shared\CRMServiceCreate.snippet
+		CRM\Shared\CRMServiceDelete.snippet = CRM\Shared\CRMServiceDelete.snippet
+		CRM\Shared\CRMServiceUpdate.snippet = CRM\Shared\CRMServiceUpdate.snippet
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflow", "Workflow", "{D58672CA-8795-498F-81CC-3C0F77A910E7}"
 	ProjectSection(SolutionItems) = preProject
-		CRMWorkflowExecute.snippet = CRMWorkflowExecute.snippet
+		CRM\Workflow\CRMWorkflowExecute.snippet = CRM\Workflow\CRMWorkflowExecute.snippet
 	EndProjectSection
 EndProject
 Global
