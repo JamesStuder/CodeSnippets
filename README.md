@@ -23,6 +23,3 @@ These are custom code snippets I created to help speed up my coding.
 
 ## More Information On Code Snippets
 https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets?view=vs-2019
-
-
-TEST
